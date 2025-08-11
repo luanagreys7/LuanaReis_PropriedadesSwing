@@ -4,29 +4,31 @@ import java.awt.*;
 
 public class Ex1 extends JFrame {
     
-    public Exercicio1Painel() {
+    public Ex1 () {
 
         // Propriedades do frame
-        setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300, 200);
         setLocationRelativeTo(null);
 
-        // Cria o painel e define sua cor de fundo
+        // Cria o painel
         JPanel painel = new JPanel();
+
+        // Define a cor de fundo do painel
         painel.setBackground(Color.GREEN);
 
         // Define uma borda com título ao painel
-        Border borda = BorderFactory.createTitledBorder("Meu Painel");
+        Border borda = BorderFactory.createTitledBorder("Painel de Controle");
         painel.setBorder(borda);
 
         // Cria um botão
         JButton botao = new JButton("Clique Aqui"); 
-        setBackground(Color.YELLOW);
+        botao.setBackground(Color.YELLOW);
 
         // Adiciona o botão ao painel
         painel.add(botao);
 
-        // Adiciona o painel ao frame
+        // Adiciona o painel na janela
         add(painel);
 
         // Torna o frame visível
@@ -34,6 +36,6 @@ public class Ex1 extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Exercicio1Painel());
+        SwingUtilities.invokeLater(() -> new Ex1());
     }
 }
