@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class Ex2 extends JFrame {
 
@@ -12,22 +13,33 @@ public class Ex2 extends JFrame {
         // Cria o JTabbedPane
         JTabbedPane tabbedPane = new JTabbedPane();
 
-        // Aba 1
+        // Aba 1 - título e JLabel
         JPanel aba1 = new JPanel();
         aba1.add(new JLabel("Bem-vindo às Configurações!"));
         tabbedPane.addTab("Configurações", aba1);
 
-        // Aba 2
+        // Aba 2 - título, ícone, fundo azul e JTextField
         JPanel aba2 = new JPanel();
-        aba2.add(new JLabel(0,
+        aba2.setBackground(Color.BLUE); // Define o fundo azul
+        aba2.add(new JLabel("Nome: "));
+        aba2.add(new JTextField(20)); // Adiciona um JTextField (Campo de texto)
+        
+        // Ícone padrão do sistema
         Icon icon2 = UIManager.getIcon("OptionPane.informationIcon"); // Ícone padrão do sistema
         tabbedPane.addTab("Perfil", icon2, aba2);
 
-        // Aba 3
+        // Aba 3 - título e JTextArea
         JPanel aba3 = new JPanel();
-        aba3.add(new JLabel("Conteúdo da Aba 3"));
-        Icon icon3 = UIManager.getIcon("OptionPane.warningIcon"); // Ícone padrão do sistema
-        tabbedPane.addTab("Aba 3", icon3, aba3, "Esta é a terceira aba com um ícone de aviso");
+        
+        // JTextArea 
+        JTextArea textArea = new JTextArea("Digite suas dúvidas aqui. ",5, 20);
+        textArea.setLineWrap(true); // Permite quebra de linha automática
+        textArea.setWrapStyleWord(true); // Quebra de linha por palavra
+        
+        // Adiciona JTextArea dentro de um JScrollPane para rolagem
+        aba3.add(new JScrollPane(textArea)); 
+        
+        tabbedPane.addTab("Ajuda", aba3);
 
         // Adiciona o JTabbedPane ao frame
         add(tabbedPane);
