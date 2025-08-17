@@ -10,24 +10,35 @@ public class Ex3 extends JFrame {
         setSize(400, 300);
         setLocationRelativeTo(null);
 
-        // Cria o JTextArea dentro de um JScrollPane para rolagem
-        JTextArea textArea = new JTextArea("Digite suas dúvidas aqui. ", 5, 20);
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true); // Quebra de linha por palavra
-        JScrollPane scrollPane = new JScrollPane(textArea);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS); // Barra de rolagem vertical sempre visível
-
-        // Cria o painel principal
+        // Cria o painel
         JPanel painel = new JPanel();
-        painel.setLayout(new BorderLayout()); // Define o layout do painel como BorderLayout 
+        
+        // Texto longo inicial
+        String texto = "Java Swing é usado para criar interfaces gráficas em Java. "
+                     + "Ele fornece componentes como botões, caixas de texto, "
+                     + "menus, tabelas, áreas de texto e muito mais. "
+                     + "Com o Swing, é possível desenvolver aplicações "
+                     + "desktop de forma rápida e organizada.";
 
+        // JTextArea 
+        JTextArea textArea = new JTextArea(texto,10, 30);
+        textArea.setBackground(Color.LIGHT_GRAY); // Define a cor de fundo
+        textArea.setFont(new Font("Arial", Font.PLAIN, 12)); // Define a fonte
+        textArea.setLineWrap(true); // Permite quebra de linha automática
+        textArea.setWrapStyleWord(true); // Quebra de linha por palavra
+        
+        // Adiciona JTextArea dentro de um JScrollPane para rolagem
+        painel.add(new JScrollPane(textArea)); 
+        
+        // Adiciona o painel na janela
+        add(painel);
 
         // Torna o frame visível
         setVisible(true);
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Ex2());
+        SwingUtilities.invokeLater(() -> new Ex3());
     }
 
     
