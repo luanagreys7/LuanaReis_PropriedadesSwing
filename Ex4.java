@@ -1,4 +1,7 @@
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
+import java.awt.*;
+import java.text.ParseException;
 
 public class Ex4 extends JFrame {
 
@@ -7,11 +10,34 @@ public class Ex4 extends JFrame {
         // Propriedades do frame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null); // Centraliza o frame na tela
 
 
-        // Cria o painel principal
+        // Cria o painel 
+        JPanel painel = new JPanel();
+        painel.setLayout(new FlowLayout(FlowLayout.LEFT));
 
+        // Label para o campo de data
+        JLabel labelData = new JLabel("Data de Nascimento: ");
+
+        // Crio o campo formatado como null para criá-llo dentro do try-catch
+        JFormattedTextField campoData = null;
+        try {
+            // Define a máscara "dd/mm/aaaa"
+            MaskFormatter mascaraData = new MaskFormatter("##/##/####");
+            mascaraData.setPlaceholderCharacter('_'); // Define o caractere de espaço reservado
+            campoData = new JFormattedTextField(mascaraData);
+            campoData.setColumns(10);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        // Adiciona o label e o campo de data ao painel
+        painel.add(labelData);
+        painel.add(campoData);
+
+        // Adiciona o painel na janela
+        add(painel);
 
         // Torna o frame visível
         setVisible(true);
