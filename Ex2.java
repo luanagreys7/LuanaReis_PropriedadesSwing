@@ -21,8 +21,7 @@ public class Ex2 extends JFrame {
         // Aba 2 - título, ícone, fundo azul e JTextField
         JPanel aba2 = new JPanel();
         aba2.setBackground(Color.BLUE); // Define o fundo azul
-        aba2.add(new JLabel("Nome: "));
-        aba2.add(new JTextField(20)); // Adiciona um JTextField (Campo de texto)
+        aba2.add(new JTextField("Nome: ",20)); // Adiciona um JTextField (Campo de texto)
         
         // Ícone padrão do sistema
         Icon icon2 = UIManager.getIcon("OptionPane.informationIcon"); // Ícone padrão do sistema
