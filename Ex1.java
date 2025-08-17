@@ -7,9 +7,9 @@ public class Ex1 extends JFrame {
     public Ex1 () {
 
         // Propriedades do frame
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 200);
-        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Fecha o aplicativo ao fechar a janela
+        setSize(300, 200); // Define o tamanho da janela
+        setLocationRelativeTo(null); // Centraliza o frame na tela
 
         // Cria o painel
         JPanel painel = new JPanel();
