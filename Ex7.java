@@ -16,5 +16,9 @@ public class Ex7 extends JFrame {
         // Torna o frame visível
         setVisible(true);
     }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new Ex7());
+    }
     
 }
