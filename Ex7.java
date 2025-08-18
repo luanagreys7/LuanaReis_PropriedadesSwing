@@ -42,6 +42,8 @@ public class Ex7 extends JFrame {
 
         // Adiciona componentes ao painel
         painel.add(comboBox);
+        painel.add(labelResultado);
+
         
         // Adiciona o painel na janela
         add(painel);
