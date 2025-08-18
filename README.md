@@ -51,7 +51,7 @@ Cada exercício está em um arquivo `.java` separado:
 | `setLineWrap(true)` | Ativa quebra de linha automática. |  
 | `setWrapStyleWord(true)` | Quebra por palavras inteiras. |  
 
-**Tarefa**:  
+**Tarefa**: "Explique por que o JScrollPane é necessário neste cenário."
 O `JScrollPane` é necessário porque encapsula o `JTextArea` e adiciona barras de rolagem quando o conteúdo excede o espaço visível. Como o `JTextArea` não possuí rolagem própria, o `JScrollPane` garante que o usário possa acessar todo o texto, mantendo a interface funcional. Sem o `JScrollPane`, o texto que ultrapassar o tamanho visível da área é cortado e fica inacessível.
 
 ---
