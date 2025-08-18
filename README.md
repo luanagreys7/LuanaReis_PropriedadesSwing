@@ -20,11 +20,12 @@ Cada exercício está em um arquivo `.java` separado:
 
 ### **Exercício 1: JPanel e JButton**  
 **Objetivo**: Criar uma janela com um `JPanel` verde e um `JButton` amarelo.  
-**Métodos usados**:  
+**Métodos usados (Tarefa)**:  
 | Método | Explicação |  
 |--------|------------|  
 | `setBackground(Color)` | Define a cor de fundo do componente. |  
-| `setBorder(BorderFactory.createTitledBorder())` | Adiciona uma borda com título. |   
+| `setBorder(BorderFactory.createTitledBorder())` | Adiciona uma borda com título. | 
+| `JButton(String text)` | Cria um botão e define o texto. | 
 
 ---
 
