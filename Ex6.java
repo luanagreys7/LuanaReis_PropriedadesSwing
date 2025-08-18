@@ -44,3 +44,10 @@ public class Ex6 extends JFrame {
         SwingUtilities.invokeLater(() -> new Ex6());
     }
 }
+
+/*
+ * Tarefa: "Como o metódo setDividerLocation funciona?" O método setDividerLocation
+ * define a posição inicial da divisória no JSplitPane. Utilizando o valor percentual
+ * (0.4), a divisória ocupa 40% da largura total, mantendo a proporção ao redimensionar
+ * a janela com o setResizeWeight(0.4).
+ */
