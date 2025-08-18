@@ -48,4 +48,10 @@ public class Ex4 extends JFrame {
     }
 }
 
-
+/*
+Tarefa: "Como a formatação é aplicada?" 
+O MaskFormatter aplica a formatação através de uma máscara ##/##/####,
+onde cada # representa um dígito obrigatório e as barras / são fixas. Caracteres inválidos são rejeitados, e os
+placeholders (_) guiam o usuário. Isso garante que o usuário só digite números no formato especificado
+('dd/mm/aaaa'), validando a entrada em tempo real.
+ */
