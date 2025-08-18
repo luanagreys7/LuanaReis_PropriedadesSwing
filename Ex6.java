@@ -29,6 +29,9 @@ public class Ex6 extends JFrame {
 
         // Divisória é posicionada a 40% da largura da janela
         splitPane.setDividerLocation(0.4); 
+        splitPane.setResizeWeight(0.4); // Redimensiona proporcionalmente
+        splitPane.setDividerSize(10); // Espessura da divisória
+        
 
         // Adiciona o JSplitPane ao frame
         add(splitPane);
