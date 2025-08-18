@@ -13,14 +13,25 @@ public class Ex3 extends JFrame {
         // Cria o painel
         JPanel painel = new JPanel();
         
-        // Texto longo inicial
-        String texto = "Java Swing é usado para criar interfaces gráficas em Java. "
-                     + "Ele fornece componentes como botões, caixas de texto, "
-                     + "menus, tabelas, áreas de texto e muito mais. "
-                     + "Com o Swing, é possível desenvolver aplicações "
-                     + "desktop de forma rápida e organizada.";
+        // Texto longo (para forçar o scroll)
+        String texto = "Java Swing é usado para criar interfaces gráficas em Java.\n"
+                     + "Ele fornece componentes como:\n"
+                     + "- JButton (botões)\n"
+                     + "- JTextField (campos de texto)\n"
+                     + "- JTextArea (áreas de texto)\n"
+                     + "- JScrollPane (painel de rolagem)\n"
+                     + "- JPanel (painéis genéricos)\n"
+                     + "- E muito mais!\n\n"
+                     + "Com o Swing, você pode desenvolver aplicações desktop completas.\n"
+                     + "Exemplo de uso:\n"
+                     + "1. Crie um JFrame para a janela principal.\n"
+                     + "2. Adicione componentes como botões e labels.\n"
+                     + "3. Use layouts para organizar os componentes.\n"
+                     + "4. Adicione listeners para interatividade.\n\n"
+                     + "Dica: Sempre use JScrollPane com JTextArea para textos longos!\n"
+                     + "Este texto é longo o suficiente para ativar a rolagem vertical e horizontal.";
 
-        // JTextArea 
+        // JTextArea com 10 linhas e 30 colunas
         JTextArea textArea = new JTextArea(texto,10, 30);
         textArea.setBackground(Color.LIGHT_GRAY); // Define a cor de fundo
         textArea.setFont(new Font("Arial", Font.PLAIN, 12)); // Define a fonte

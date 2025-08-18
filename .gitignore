@@ -1,0 +1,13 @@
+# Ignorar arquivos compilados Java
+*.class
+
+# Ignorar arquivos de IDE/editor
+bin/
+.settings/
+.vscode/
+*.iml
+*.ipr
+
+# Ignorar logs e arquivos temporários
+*.log
+*.tmp
