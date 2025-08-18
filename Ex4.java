@@ -15,7 +15,7 @@ public class Ex4 extends JFrame {
 
         // Cria o painel 
         JPanel painel = new JPanel();
-        painel.setLayout(new FlowLayout(FlowLayout.LEFT));
+        painel.setLayout(new GridLayout(2,1)); // Define o layout do painel como GridLayout com 2 linhas e 1 coluna);
 
         // Label para o campo de data
         JLabel labelData = new JLabel("Data de Nascimento: ");
