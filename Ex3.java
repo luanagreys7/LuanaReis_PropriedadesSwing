@@ -55,4 +55,15 @@ public class Ex3 extends JFrame {
     
 }
 
+/*
+Tarefa:
+O JScrollPane é necessário porque encapsula o JTextArea e adiciona barras
+de rolagem quando o conteúdo excede o espaço visível. Como o JTextArea
+não possuí rolagem própria, o JScrollPane garante que o usário possa
+acessar todo o texto, mantendo a interface funcional. Sem o JScrollPane, o
+texto que ultrapassar o tamanho visível da área é cortado e fica inacessível.
+
+
+ */
+
 
