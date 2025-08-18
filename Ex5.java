@@ -17,28 +17,27 @@ public class Ex5 extends JFrame {
         JPanel painel = new JPanel();
         painel.setLayout(new GridLayout(5, 1)); // Define o layout do painel como GridLayout com 5 linhas e 1 coluna
 
-        // Cria os radio buttons
+        // Cria os JRadioButtons para seleção de gênero
         JRadioButton masculino = new JRadioButton("Masculino");
         JRadioButton feminino = new JRadioButton("Feminino");
         JRadioButton outro = new JRadioButton("Outro");
 
-        // ButtonGroup (garantindo que só uma das opções seja selecionado)
+        // ButtonGroup garantindo que apenas um JRadioButton seja selecionado por vez
         ButtonGroup grupo = new ButtonGroup();
         grupo.add(masculino);
         grupo.add(feminino);
         grupo.add(outro);
 
-        // Label para mostrar a opção escolhida ( Atualiza o texto quando o botão é clicado)
+        // JLabel para mostrar a opção escolhida ( Atualiza o texto quando o botão é clicado)
         JLabel resultado = new JLabel("Selecione um gênero e clique no botão");
 
         // Cria o botão para exibir o Jlabel com a opção selecionada
         JButton botao = new JButton("Confirmar");
 
-        // Ação do botão com ActionListener
+        // Ação ao clicar no botão com ActionListener
         botao.addActionListener(new ActionListener() {
-            // O ActionListener define um método obrigatório chamado actionPerformed(ActionEvent e).
             @Override
-            // Essa classe anônima implementa (sobescrevendo) o método actionPerformed, que é chamado quando o botão é clicado.
+            // Classe anônima implementa (sobescrevendo) o método obrigatório do ActionListener (actionPerformed)
             public void actionPerformed(ActionEvent e) {
                 if (masculino.isSelected()) {
                     resultado.setText("Selecionado: Masculino");
