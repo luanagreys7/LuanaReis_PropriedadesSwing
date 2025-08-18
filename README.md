@@ -30,7 +30,7 @@ Cada exercício está em um arquivo `.java` separado:
 ---
 
 ### **Exercício 2: JTabbedPane**  
-**Objetivo**: Criar uma área de texto com rolagem automática.  
+**Objetivo**: Criar um JTabbedPane com 3 abas.  
 **Métodos usados**:  
 | Método | Explicação |  
 |--------|------------|  
@@ -39,15 +39,14 @@ Cada exercício está em um arquivo `.java` separado:
 | `setWrapStyleWord(true)` | Quebra por palavras inteiras. |  
 | `UIManager.getIcon("FileView.directoryIcon")` | Recupera ícone padrão do sistema |  
 
-**Tarefa**:  
-O `JScrollPane` é necessário porque o `JTextArea` não tem rolagem nativa. Quando o texto excede o espaço visível, as barras de rolagem aparecem.  
-
 ---
 ### **Exercício 3: JScrollPane e JTextArea**  
 **Objetivo**: Criar uma área de texto com rolagem automática.  
 **Métodos usados**:  
 | Método | Explicação |  
 |--------|------------|  
+| `JScrollPane(Component)` | Adiciona barras de rolagem ao componente. |
+| `JTextArea()` | Cria área de texto com dimensões fixas. |
 | `setFont(new Font("Arial", Font.PLAIN, 12))` | Altera a fonte usada. |  
 | `setLineWrap(true)` | Ativa quebra de linha automática. |  
 | `setWrapStyleWord(true)` | Quebra por palavras inteiras. |  
@@ -92,7 +91,7 @@ O método `setDividerLocation` define a posição inicial da divisória no `JSpl
 | `setVisible(true)` | Torna a janela visível. |  
 | `add(Component)` | Adiciona componentes (botões, labels) a um container. | 
 | `JTextField(String texto, int colunas)` | Cria campo de texto com texto inicial e largura em colunas. | 
-| `JTextArea(String texto, int linhas, int colunas)` | Área de texto com dimensões fixas. |
+| `JTextArea()` | Área de texto com dimensões fixas. |
 
 
 ---
